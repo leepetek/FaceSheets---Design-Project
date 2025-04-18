@@ -1,0 +1,1470 @@
+/* --- Global Styles & Variables --- */
+:root {
+    --primary-color: #C67F00; /* Orange/Brown */
+    --secondary-color: #F5EBE0; /* Light Beige */
+    --dark-color: #333;
+    --light-color: #fff;
+    --grey-color: #f4f4f4;
+    --text-color: #333;
+    --border-radius-sm: 8px;
+    --border-radius-md: 15px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif; /* Or your preferred font */
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--light-color); /* Or a very light grey */
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+a {
+    text-decoration: none;
+    color: var(--primary-color);
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+.card {
+    background-color: var(--secondary-color);
+    border-radius: var(--border-radius-md);
+    padding: 25px;
+    margin-bottom: 30px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 25px;
+    border-radius: var(--border-radius-md);
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-align: center;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: var(--light-color);
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: #a56800; /* Darker shade */
+}
+
+.btn-secondary {
+    background-color: var(--light-color);
+    color: var(--dark-color);
+    border: 1px solid #ddd;
+     border-radius: var(--border-radius-sm); /* Smaller radius for update */
+     padding: 8px 20px;
+}
+
+.btn-secondary:hover {
+    background-color: #eee;
+}
+
+.section-title {
+    font-size: 1.6rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: var(--dark-color);
+}
+
+.section-title-large {
+     font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+     color: var(--dark-color);
+}
+
+
+/* --- Header --- */
+.main-header {
+    background-color: var(--light-color);
+    border-bottom: 1px solid #eee;
+    padding: 15px 0;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-area {
+    display: flex;
+    align-items: center;
+}
+
+.profile-icon {
+    font-size: 2rem;
+    color: #ccc;
+    margin-right: 10px;
+}
+
+.logo-text {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.main-nav ul {
+    display: flex;
+}
+
+.main-nav .nav-button {
+    background-color: var(--secondary-color);
+    color: var(--dark-color);
+    padding: 8px 15px;
+    margin: 0 5px;
+    border-radius: var(--border-radius-md);
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+
+}
+.main-nav .nav-button:hover,
+.main-nav .nav-button.active {
+    background-color: var(--primary-color);
+    color: var(--light-color);
+}
+
+
+.search-area {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ddd;
+    border-radius: var(--border-radius-md);
+    overflow: hidden; /* Keep button contained */
+}
+
+.search-area input[type="text"] {
+    padding: 8px 15px;
+    border: none;
+    outline: none;
+    font-size: 0.9rem;
+    min-width: 200px;
+}
+
+.search-area .search-button {
+    background: none;
+    border: none;
+    padding: 0 12px;
+    cursor: pointer;
+    color: #aaa;
+    font-size: 1rem;
+}
+
+/* --- Main Content --- */
+.main-content {
+    padding: 30px 0;
+}
+
+/* --- Hero Section --- */
+.hero-section {
+    display: flex;
+    background-color: #f0f0f0; /* Placeholder */
+    border-radius: var(--border-radius-md);
+    overflow: hidden;
+    margin-bottom: 30px;
+    min-height: 350px; /* Adjust as needed */
+    position: relative; /* For potential gradient overlays */
+}
+
+.hero-text {
+    flex: 1;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgba(245, 235, 224, 0.8); /* Semi-transparent beige overlay */
+    z-index: 1; /* Ensure text is above image */
+}
+
+.hero-text h2 {
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 15px;
+     color: var(--dark-color);
+}
+
+.hero-text p {
+    font-size: 1.1rem;
+    margin-bottom: 25px;
+}
+
+.hero-image {
+    flex: 1;
+    background-image: url('https://images.unsplash.com/photo-1737587653765-94bc8fe7b541?q=80&w=1931&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'); /* Replace with your image */
+    background-size: cover;
+    background-position: center;
+}
+.hero-image img {
+    display: none; /* Hide img tag, use background */
+}
+
+
+/* --- Emergency Contact --- */
+.emergency-contact {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+.emergency-contact > div {
+    margin: 5px 10px;
+    text-align: center;
+}
+.emergency-contact strong {
+    display: block;
+    font-size: 0.9rem;
+    color: #555;
+    margin-bottom: 3px;
+}
+.emergency-contact span {
+    font-weight: 600;
+}
+
+/* --- Medical Records --- */
+.medical-records {
+    text-align: center; /* Center the title */
+     margin-bottom: 30px;
+}
+
+.records-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Responsive grid */
+    gap: 20px;
+    margin-top: 20px;
+    align-items: center;
+}
+
+.record-card {
+    background-color: var(--secondary-color);
+    border-radius: var(--border-radius-md);
+    padding: 25px 15px;
+    text-align: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.record-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.record-card .icon {
+    font-size: 2.5rem; /* Adjust icon size */
+    color: var(--dark-color);
+    margin-bottom: 15px;
+}
+
+.record-card p {
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.record-card.highlight {
+    background-color: var(--primary-color);
+    color: var(--light-color);
+}
+.record-card.highlight .icon {
+    color: var(--light-color);
+}
+.record-card.highlight p {
+    color: var(--light-color);
+}
+
+
+/* --- Scheduled Appointments --- */
+.scheduled-appointments {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    position: relative; /* For decorative circle */
+}
+
+.appointment-text {
+    flex: 1;
+    align-items: center; /* Center items in grid cells */
+    justify-items: center; /* Center items in grid cells */
+}
+.appointment-text p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    color: #555;
+}
+
+.appointment-images {
+    flex: 1;
+    position: relative;
+    min-height: 200px; /* Ensure space for positioned images */
+    display: grid; /* Using grid for overlapping layout */
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 10px; /* Adjust gap */
+    align-items: center; /* Center items in grid cells */
+    justify-items: center; /* Center items in grid cells */
+}
+
+.appointment-img {
+    width: 120px; /* Adjust size */
+    height: 120px; /* Adjust size */
+    border-radius: var(--border-radius-md);
+    object-fit: cover;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Position images using grid-area or absolute positioning */
+.appointment-images .img1 {
+   grid-row: 1 / 2;
+   grid-column: 1 / 2;
+   align-self: end; /* Position towards bottom of cell */
+   justify-self: end; /* Position towards right of cell */
+   transform: translate(10%, 10%); /* Nudge */
+   z-index: 2;
+}
+.appointment-images .img2 {
+   grid-row: 2 / 3;
+   grid-column: 1 / 2;
+    align-self: start; /* Position towards top of cell */
+    justify-self: center; /* Position towards center horizontally */
+     transform: translateY(-15%); /* Nudge */
+     z-index: 1;
+}
+.appointment-images .img3 {
+    grid-row: 1 / 3; /* Span both rows */
+    grid-column: 2 / 3; /* Second column */
+    width: 200px; /* Larger image */
+    height: 240px; /* Larger image */
+     align-self: center; /* Center vertically */
+     justify-self: start; /* Position towards left of cell */
+     transform: translateX(-10%); /* Nudge */
+     z-index: 3;
+}
+
+
+.decorative-circle {
+    position: absolute;
+    width: 0px; /* Size of circle */
+    height: 0px;
+    background-color: var(--primary-color);
+    border-radius: 50%;
+    top: 10%; /* Adjust position */
+    right: 25%; /* Adjust position */
+    z-index: 0; /* Behind images */
+}
+
+
+/* --- Information Controls --- */
+.info-controls {
+     margin-bottom: 30px;
+}
+
+.controls-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+}
+
+.control-card {
+    height: 250px; /* Adjust height */
+    border-radius: var(--border-radius-md);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    justify-content: center; /* Center button horizontally */
+    align-items: flex-end; /* Place button at the bottom */
+    padding: 20px;
+    overflow: hidden;
+    color: var(--light-color); /* Default text color for potential overlays */
+}
+.control-card::before { /* Optional: Dark overlay for better text contrast */
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(0,0,0,0.3);
+    border-radius: var(--border-radius-md);
+     z-index: 0;
+}
+
+
+.control-card .overlay-btn,
+.control-card .overlay-label {
+    position: relative; /* Ensure button is above overlay */
+    z-index: 1;
+    text-align: center;
+}
+
+.control-card .overlay-btn {
+     width: 80%; /* Make button wider */
+}
+
+
+.control-card .overlay-label {
+     background-color: var(--secondary-color);
+     color: var(--dark-color);
+     padding: 12px 20px;
+     border-radius: var(--border-radius-md);
+     font-weight: 600;
+     width: 80%; /* Match button width */
+}
+
+
+/* Specific background images */
+.control-card.card1 {
+    background-image: url('https://images.unsplash.com/photo-1588979355313-6711a095465f?q=80&w=1944&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+}
+.control-card.card2 {
+    background-image: url('https://plus.unsplash.com/premium_photo-1661580574627-9211124e5c3f?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+}
+.control-card.card3 {
+    background-image: url('https://images.unsplash.com/photo-1536882240095-0379873feb4e?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+}
+.control-card.card3::before { /* Less overlay for the lighter button */
+    background-color: rgba(0,0,0,0.1);
+}
+
+/* --- Footer --- */
+.main-footer {
+    background-color: var(--light-color);
+    padding: 30px 0;
+    border-top: 1px solid #eee;
+    margin-top: 40px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; /* Align items to top */
+}
+
+.footer-logo .logo-text {
+    font-size: 1.4rem;
+    color: var(--dark-color);
+}
+
+.footer-nav ul li {
+    margin-bottom: 8px;
+}
+.footer-nav ul li a {
+    color: #555;
+    font-size: 0.95rem;
+}
+.footer-nav ul li a:hover {
+    color: var(--primary-color);
+}
+.footer-nav ul.help-center li:first-child {
+    margin-bottom: 12px; /* More space below title */
+}
+.footer-nav ul.help-center strong {
+    color: var(--dark-color);
+    font-size: 1.1rem;
+}
+
+/* --- Basic Responsiveness (Example) --- */
+@media (max-width: 992px) {
+    .hero-section {
+        flex-direction: column;
+    }
+    .hero-image {
+       min-height: 250px;
+    }
+    .scheduled-appointments {
+        flex-direction: column;
+        text-align: center;
+    }
+    .appointment-images {
+        min-height: 250px; /* Adjust */
+        grid-template-columns: repeat(2, 1fr); /* Stack maybe? Or adjust sizes */
+        /* Re-evaluate image positioning for smaller screens */
+        width: 100%;
+    }
+     .decorative-circle {
+         /* Adjust or hide */
+         width: 100px;
+         height: 100px;
+         top: 5%;
+         right: 5%;
+     }
+}
+
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+    .main-nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+     .search-area {
+         width: 90%;
+     }
+     .search-area input[type="text"] {
+         min-width: 0; /* Allow shrinking */
+         flex-grow: 1;
+     }
+    .emergency-contact {
+        flex-direction: column;
+        align-items: stretch; /* Make items full width */
+        text-align: left;
+    }
+     .emergency-contact > div {
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 1px dashed #ccc;
+        padding: 8px 0;
+    }
+    .emergency-contact > div:last-child {
+         border-bottom: none;
+         justify-content: center; /* Center update button */
+         margin-top: 10px;
+    }
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 20px;
+    }
+}
+
+/* Style the body specifically for the sign-in page */
+body.auth-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: var(--secondary-color, #F5EBE0); /* Use beige as background */
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: var(--text-color, #333);
+}
+
+/* Generic container for auth forms */
+.auth-container {
+    background-color: var(--light-color, #fff); /* White card */
+    padding: 40px 35px;
+    border-radius: var(--border-radius-md, 15px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 90%; /* Responsive width */
+    text-align: center;
+}
+
+/* Logo style (ensure this is present) */
+.auth-container .logo-text {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: var(--dark-color, #333);
+    margin-bottom: 10px;
+}
+
+/* Heading style */
+.auth-container h2 {
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: #555;
+    margin-bottom: 15px; /* Adjusted margin */
+}
+
+/* NEW: Style for the instruction paragraph */
+.auth-container .auth-instruction {
+    font-size: 0.95rem;
+    color: #666;
+    margin-bottom: 30px; /* Space below instruction */
+    line-height: 1.5;
+}
+
+/* Generic form style */
+.auth-form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+/* Form group style (ensure this is present) */
+.form-group {
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 5px;
+    font-size: 0.9rem;
+    color: var(--dark-color, #333);
+}
+
+/* Input style (ensure this is present) */
+.auth-form input[type="email"],
+.auth-form input[type="password"],
+.auth-form input[type="text"]
+ /* Keep password style if needed elsewhere */ {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ccc;
+    border-radius: var(--border-radius-sm, 8px);
+    font-size: 1rem;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.auth-form input[type="email"]:focus,
+.auth-form input[type="password"]:focus,
+.auth-form input[type="text"]:focus {
+    outline: none;
+    border-color: var(--primary-color, #C67F00);
+    box-shadow: 0 0 0 3px rgba(198, 127, 0, 0.15);
+}
+
+/* Button style (ensure .btn and .btn-primary are defined) */
+.auth-form .btn-primary {
+    width: 100%;
+    padding: 12px;
+    font-size: 1.05rem;
+    margin-top: 10px; /* Space above button */
+}
+
+/* Generic links style */
+.auth-links {
+    margin-top: 25px;
+    font-size: 0.9rem;
+}
+
+/* (Keep this style if you used it previously) */
+.auth-links .forgot-password { /* Only relevant on sign-in page */
+    display: block;
+    margin-bottom: 15px;
+    color: var(--primary-color, #C67F00);
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.auth-links p {
+    color: #555;
+    margin: 0;
+}
+
+.auth-links p a {
+    color: var(--primary-color, #C67F00);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.auth-links a:hover {
+    text-decoration: underline;
+}
+/* Style for the password input group */
+.form-group.password-group {
+    position: relative;
+}
+
+/* Style for the eye icon */
+.toggle-password {
+    position: absolute;
+    right: 15px;
+    /* Adjust top position to vertically align with the input field */
+    /* This might need tweaking depending on label presence/font size */
+    top: 40px; /* Start value, adjust as needed */
+    cursor: pointer;
+    color: #aaa; /* Grey color for the icon */
+    font-size: 0.9rem;
+}
+
+/* Style for the password strength indicator container */
+#password-strength-indicator {
+    height: 8px; /* Height of the bar background */
+    background-color: #eee; /* Light grey background */
+    border-radius: 4px;
+    margin-top: 8px; /* Space below password input */
+    overflow: hidden; /* Ensure inner bar stays within bounds */
+}
+
+/* Style for the actual strength bar */
+#strength-bar {
+    height: 100%;
+    width: 0; /* Start with no width */
+    border-radius: 4px;
+    background-color: #e74c3c; /* Default/weak color (red) */
+    transition: width 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+/* Style for the strength text (optional) */
+.strength-text {
+    display: block;
+    text-align: right;
+    font-size: 0.8rem;
+    margin-top: 3px;
+    color: #666;
+    min-height: 1em; /* Reserve space even when empty */
+}
+
+/* Strength levels (will be controlled by JS) */
+#strength-bar.weak { width: 25%; background-color: #e74c3c; } /* Red */
+#strength-bar.medium { width: 50%; background-color: #f39c12; } /* Orange */
+#strength-bar.good { width: 75%; background-color: #f1c40f; } /* Yellow */
+#strength-bar.strong { width: 100%; background-color: #2ecc71; } /* Green */
+
+/* Style for error messages (generic) */
+.error-message {
+    color: #e74c3c; /* Red for errors */
+    font-size: 0.85rem;
+    margin-top: 5px;
+    display: none; /* Hidden by default */
+    text-align: left;
+    min-height: 1em; /* Reserve space */
+}
+
+/* Ensure input fields have enough padding on the right if icon overlaps */
+.password-group input[type="password"],
+.password-group input[type="text"] { /* Handle case when password shown */
+    padding-right: 40px; /* Add space for the eye icon */
+}
+/* --- Add/Modify styles for Profile Page --- */
+
+body {
+    background-color: #f9f9f9; /* Slightly off-white background for the page */
+    font-family: 'Poppins', sans-serif;
+    color: var(--dark-color, #333);
+    margin: 0;
+}
+
+.page-container {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* --- Left Sidebar --- */
+.left-sidebar {
+    width: 260px; /* Fixed width for sidebar */
+    background-color: var(--light-color, #fff);
+    border-right: 1px solid #eee;
+    padding: 25px 0; /* Padding top/bottom, no left/right */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Pushes footer to bottom */
+    flex-shrink: 0; /* Prevent sidebar from shrinking */
+}
+
+.sidebar-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar-nav .nav-link {
+    display: flex;
+    align-items: center;
+    padding: 12px 25px; /* Padding inside the link */
+    color: #555; /* Default link color */
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: background-color 0.2s ease, color 0.2s ease;
+    position: relative; /* For active state indicator */
+}
+
+.sidebar-nav .nav-icon {
+    margin-right: 15px;
+    width: 20px; /* Allocate space for icon */
+    text-align: center;
+    color: #888; /* Slightly muted icon color */
+}
+
+.sidebar-nav .nav-link:hover {
+    background-color: var(--secondary-color, #F5EBE0);
+    color: var(--dark-color, #333);
+}
+
+.sidebar-nav .nav-link.active {
+    background-color: var(--secondary-color, #F5EBE0);
+    color: var(--dark-color, #333);
+    font-weight: 600;
+}
+/* Optional: Add a left border for active state like in some designs */
+/* .sidebar-nav .nav-link.active::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background-color: var(--primary-color, #C67F00);
+} */
+
+
+.sidebar-nav .nav-section .nav-link.expandable {
+    justify-content: space-between; /* Push toggle icon to right */
+}
+
+.sidebar-nav .toggle-icon {
+    font-size: 0.8rem;
+    transition: transform 0.3s ease;
+    color: #aaa;
+}
+/* Add class via JS to rotate icon when expanded */
+/* .sidebar-nav .nav-link.expandable.expanded .toggle-icon { transform: rotate(180deg); } */
+
+.sidebar-nav .sub-menu {
+    list-style: none;
+    padding-left: 40px; /* Indent sub-menu */
+    /* display: none; */ /* Control visibility with JS */
+    max-height: 500px; /* Or use JS for height transition */
+    overflow: hidden;
+    transition: max-height 0.4s ease-in-out;
+}
+/* Add class via JS to show */
+/* .sidebar-nav .sub-menu.show { display: block; } */
+
+.sidebar-nav .sub-menu li a {
+    display: block;
+    padding: 8px 25px;
+    color: #666;
+    font-size: 0.9rem;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.sidebar-nav .sub-menu li a:hover {
+    color: var(--primary-color, #C67F00);
+}
+
+.sidebar-footer {
+    margin-top: 30px; /* Space above footer link */
+    border-top: 1px solid #eee;
+    padding-top: 15px;
+}
+.sidebar-footer .nav-link {
+     padding: 12px 25px;
+}
+
+/* --- Main Content Wrapper --- */
+.main-content-wrapper {
+    flex-grow: 1; /* Takes remaining space */
+    display: flex;
+    flex-direction: column;
+}
+
+/* --- Page Header --- */
+.page-header {
+    background-color: var(--light-color, #fff);
+    padding: 15px 30px;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-title h2 {
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Space between action items */
+}
+
+.search-bar {
+    position: relative;
+}
+
+.search-bar input[type="search"] {
+    padding: 8px 15px 8px 35px; /* Space for icon */
+    border: 1px solid #ddd;
+    border-radius: 20px; /* Rounded search bar */
+    min-width: 250px;
+    font-size: 0.9rem;
+    outline: none;
+}
+.search-bar input[type="search"]:focus {
+     border-color: var(--primary-color, #C67F00);
+}
+
+.search-bar .search-icon {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #aaa;
+    font-size: 0.9rem;
+}
+
+
+.header-actions .btn-save {
+    /* Use existing btn-primary styles */
+     border-radius: 20px; /* Match search bar */
+     padding: 8px 25px;
+}
+
+.icon-btn {
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    color: #777;
+    cursor: pointer;
+    padding: 5px;
+    transition: color 0.2s ease;
+}
+.icon-btn:hover {
+    color: var(--primary-color, #C67F00);
+}
+
+.user-avatar {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #eee; /* Optional border */
+}
+
+/* --- Content Area (Alerts + Filters) --- */
+.content-area {
+    flex-grow: 1; /* Takes remaining vertical space */
+    padding: 30px;
+    display: flex;
+    gap: 30px; /* Space between alerts and filters */
+}
+
+.section-heading {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 25px;
+}
+
+.alert-actions a {
+    color: var(--primary-color, #C67F00);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    margin-right: 15px;
+}
+.alert-actions a:hover {
+    text-decoration: underline;
+}
+
+/* --- Responsive Considerations (Basic Example) --- */
+@media (max-width: 1200px) {
+    .content-area {
+        flex-direction: column; /* Stack alerts and filters */
+    }
+    .filter-sidebar {
+        width: 100%; /* Make filter bar full width */
+    }
+}
+
+@media (max-width: 992px) {
+     .left-sidebar {
+        /* Consider making it collapsible or hidden */
+        width: 220px; /* Slightly smaller */
+    }
+     .page-header {
+         flex-direction: column;
+         align-items: flex-start;
+         gap: 10px;
+     }
+     .header-actions {
+         width: 100%;
+         justify-content: space-between; /* Spread actions */
+     }
+     .search-bar input {
+         min-width: 150px; /* Allow shrinking */
+         width: 100%;
+     }
+}
+
+@media (max-width: 768px) {
+    .left-sidebar {
+        /* Hide sidebar, implement toggle button */
+        display: none;
+        /* position: fixed; z-index: 1000; left: -250px; transition: left 0.3s ease; */
+    }
+    /* Add styles for a hamburger menu button */
+    .page-container {
+        /* Adjust layout when sidebar is hidden/toggled */
+    }
+     .content-area {
+         padding: 15px;
+         gap: 15px;
+     }
+     .section-heading {
+         font-size: 1.6rem;
+     }
+     .alerts-card, .filter-card {
+         padding: 15px;
+     }
+     .header-actions {
+         flex-wrap: wrap; /* Allow actions to wrap */
+         gap: 8px;
+     }
+}
+/* --- Medical Records Section --- */
+.medical-records-section {
+    /* Add specific styling if needed, but likely okay as is */
+}
+
+.section-heading { /* Keep this style */
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 25px;
+}
+
+.records-grid {
+    display: grid;
+    /* Adjust minmax for desired card size */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px; /* Space between cards */
+}
+
+.record-card {
+    background-color: var(--light-color, #fff);
+    border-radius: var(--border-radius-md, 15px);
+    padding: 20px 25px; /* Inner padding */
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    /* border: 1px solid #eee; */ /* Optional subtle border */
+    display: flex; /* Allows controlling vertical space better */
+    flex-direction: column;
+    cursor: pointer; /* Indicate clickable */
+    transition: transform 0.2s ease, box-shadow 0.2s ease; /* Add hover effect */
+}
+
+.record-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.record-card h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 10px; /* Space below heading */
+    color: var(--dark-color, #333);
+    display: flex; /* Align icon and text */
+    align-items: center;
+}
+
+.record-card h3 i {
+    margin-right: 10px;
+    color: var(--primary-color, #C67F00); /* Use primary color for icons */
+    font-size: 1.2rem; /* Adjust icon size */
+    width: 20px; /* Ensure alignment */
+    text-align: center;
+}
+
+.record-card p { /* Style for the summary paragraph */
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 15px;
+    line-height: 1.5;
+    flex-grow: 1; /* Pushes the link to the bottom if height varies */
+}
+
+.record-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 15px 0; /* Space below list */
+    color: #555;
+    font-size: 0.9rem;
+    flex-grow: 1; /* Pushes the link to the bottom */
+}
+
+.record-card li {
+    padding: 4px 0;
+    /* Add more styling like icons per list item if desired */
+}
+
+.record-card .view-details-link {
+    display: inline-block; /* Allows it to sit naturally at the end */
+    margin-top: 10px; /* Space above the link */
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--primary-color, #C67F00);
+    text-decoration: none;
+    align-self: flex-start; /* Align link to the left */
+}
+
+.record-card .view-details-link:hover {
+    text-decoration: underline;
+    
+}
+
+/* --- Slide-in Panel Styles --- */
+.slide-in-panel {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 380px; /* Adjust width as needed */
+    max-width: 90%;
+    height: 100vh;
+    background-color: var(--light-color, #fff);
+    box-shadow: -5px 0 15px rgba(0,0,0,0.15);
+    z-index: 1010; /* Above overlay */
+    transform: translateX(100%); /* Initially hidden */
+    transition: transform 0.4s ease-in-out;
+    display: flex;
+    flex-direction: column; /* Arrange header, content, footer vertically */
+}
+
+.slide-in-panel.is-open {
+    transform: translateX(0); /* Slide in */
+}
+
+.panel-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 25px;
+    border-bottom: 1px solid #eee;
+    flex-shrink: 0; /* Prevent header from shrinking */
+}
+
+.panel-header h3 {
+    margin: 0;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.panel-close-btn {
+    background: none;
+    border: none;
+    font-size: 1.8rem;
+    font-weight: 300;
+    color: #aaa;
+    cursor: pointer;
+    padding: 0 5px;
+    line-height: 1;
+}
+.panel-close-btn:hover {
+    color: var(--dark-color, #333);
+}
+
+.panel-content {
+    padding: 25px;
+    overflow-y: auto; /* Allow scrolling if content overflows */
+    flex-grow: 1; /* Take available vertical space */
+}
+
+.panel-form-group {
+    margin-bottom: 20px;
+}
+
+.panel-form-group label {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 8px;
+    font-size: 0.9rem;
+    color: var(--dark-color, #333);
+}
+
+.panel-form-group textarea {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #ccc;
+    border-radius: var(--border-radius-sm, 8px);
+    font-size: 0.95rem;
+    font-family: inherit; /* Use the page font */
+    resize: vertical; /* Allow vertical resize */
+    box-sizing: border-box;
+    background-color: #f8f8f8; /* Slightly greyed out when readonly */
+    transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+/* Style for readonly state */
+.panel-form-group textarea[readonly] {
+    background-color: transparent; /* Look like plain text */
+    border-color: transparent;
+    resize: none; /* No resize handle when readonly */
+    padding-left: 0; /* Align with label potentially */
+    padding-right: 0;
+    color: #444; /* Adjust text color if needed */
+    cursor: default;
+    border-bottom: 1px solid #eee; /* Optional subtle line */
+    border-radius: 0;
+}
+
+/* Style when panel is in edit mode */
+.slide-in-panel.edit-mode .panel-form-group textarea {
+    background-color: var(--light-color, #fff);
+    border-color: #ccc;
+    resize: vertical;
+}
+.slide-in-panel.edit-mode .panel-form-group textarea:focus {
+     outline: none;
+     border-color: var(--primary-color, #C67F00);
+     box-shadow: 0 0 0 2px rgba(198, 127, 0, 0.1);
+}
+
+
+.panel-footer {
+    padding: 15px 25px;
+    border-top: 1px solid #eee;
+    display: flex;
+    justify-content: flex-end; /* Align buttons to the right */
+    gap: 10px;
+    background-color: #fdfdfd;
+    flex-shrink: 0; /* Prevent footer from shrinking */
+}
+
+/* Define a tertiary button style for Cancel */
+.btn-tertiary {
+    background-color: #eee;
+    color: #555;
+    border: 1px solid #ddd;
+}
+.btn-tertiary:hover {
+    background-color: #e0e0e0;
+}
+
+
+/* --- Panel Overlay --- */
+.panel-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3); /* Semi-transparent black */
+    z-index: 1000; /* Below panel, above main content */
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.4s ease-in-out, visibility 0s linear 0.4s; /* Fade out */
+}
+
+.panel-overlay.is-visible {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.4s ease-in-out, visibility 0s linear 0s; /* Fade in */
+}
+
+/* --- Adjustments for when panel is open --- */
+/* Optional: Prevent body scrolling when panel is open */
+body.panel-open {
+    overflow: hidden;
+}
+
+/* Body styling for contact page */
+body.contact-page {
+    background-color: var(--secondary-color, #F5EBE0); /* Beige background */
+    /* font-family, line-height, color should be inherited or set globally */
+}
+
+/* Simple Header (Optional) */
+.simple-header {
+    background-color: var(--light-color, #fff);
+    padding: 15px 0;
+    border-bottom: 1px solid #eee;
+}
+.simple-header .logo-text {
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: var(--dark-color, #333);
+    margin: 0;
+}
+
+/* Main content area */
+.contact-main.container {
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.page-title {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: var(--dark-color, #333);
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.page-subtitle {
+    font-size: 1.1rem;
+    color: #666;
+    text-align: center;
+    margin-bottom: 40px;
+    max-width: 600px; /* Limit width of subtitle */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Wrapper for the two columns */
+.contact-wrapper {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    gap: 40px; /* Space between columns */
+    align-items: flex-start; /* Align items to the top */
+}
+
+/* Contact Info Section */
+.contact-info {
+    flex: 1; /* Takes up available space */
+    min-width: 300px; /* Minimum width before wrapping */
+}
+
+.contact-info h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: var(--dark-color, #333);
+}
+
+.contact-info p {
+    color: #555;
+    margin-bottom: 25px;
+    line-height: 1.6;
+}
+
+.contact-details-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.contact-details-list li {
+    display: flex;
+    align-items: flex-start; /* Align icon top with text block */
+    margin-bottom: 20px;
+    gap: 15px; /* Space between icon and text */
+}
+
+.contact-icon {
+    font-size: 1.3rem; /* Icon size */
+    color: var(--primary-color, #C67F00); /* Use primary color */
+    width: 25px; /* Fixed width for alignment */
+    text-align: center;
+    margin-top: 3px; /* Slight adjustment for alignment */
+    flex-shrink: 0;
+}
+
+.contact-details-list li div {
+    font-size: 0.95rem;
+    color: #444;
+    line-height: 1.5;
+}
+
+.contact-details-list li strong {
+    display: block;
+    font-weight: 600;
+    color: var(--dark-color, #333);
+    margin-bottom: 3px;
+}
+
+.contact-details-list li a {
+    color: var(--primary-color, #C67F00);
+    text-decoration: none;
+    font-weight: 500;
+}
+.contact-details-list li a:hover {
+    text-decoration: underline;
+}
+
+/* Contact Form Section */
+.contact-form-section {
+    flex: 1.2; /* Slightly wider than info section */
+    min-width: 320px; /* Minimum width before wrapping */
+}
+
+/* Card background for the form */
+.form-card {
+    background-color: var(--light-color, #fff);
+    padding: 30px;
+    border-radius: var(--border-radius-md, 15px);
+    box-shadow: 0 3px 10px rgba(0,0,0,0.07);
+}
+
+.form-card h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 25px;
+    color: var(--dark-color, #333);
+    text-align: center;
+}
+
+/* Reuse existing form styles if defined, otherwise: */
+.contact-form .form-group {
+    margin-bottom: 20px;
+}
+
+.contact-form label {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 8px;
+    font-size: 0.9rem;
+    color: var(--dark-color, #333);
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ccc;
+    border-radius: var(--border-radius-sm, 8px);
+    font-size: 0.95rem;
+    box-sizing: border-box;
+    font-family: inherit;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-form textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.contact-form input[type="text"]:focus,
+.contact-form input[type="email"]:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: var(--primary-color, #C67F00);
+    box-shadow: 0 0 0 3px rgba(198, 127, 0, 0.15);
+}
+
+/* Ensure primary button style is defined */
+.contact-form .btn-primary {
+    width: 100%; /* Make button full width */
+    padding: 12px;
+    font-size: 1.05rem;
+    margin-top: 10px; /* Space above button */
+}
+
+/* Simple Footer (Optional) */
+.simple-footer {
+    background-color: #e8dccc; /* Slightly darker beige */
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 50px; /* Space above footer */
+    font-size: 0.9rem;
+    color: #554;
+}
+.simple-footer p {
+    margin: 0;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .contact-wrapper {
+        gap: 30px; /* Reduce gap on smaller screens */
+    }
+    /* Columns will stack naturally due to flex-wrap */
+}
