@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile - Medical Records - MyHealth</title>
+    <link rel="stylesheet" href="style.css"> <!-- Link to the SAME CSS file -->
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Link to a Google Font (Optional - Example: Poppins) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="page-container">
+
+        <!-- ===== Left Sidebar Navigation (Same as before) ===== -->
+        <aside class="left-sidebar">
+            <!-- Sidebar content remains the same -->
+             <nav class="sidebar-nav">
+                <ul>
+                    <li>
+                        <a href="#" class="nav-link active">
+                            <i class="fas fa-user-edit nav-icon"></i> Edit Profile
+                        </a>
+                    </li>
+                    <li class="nav-section">
+                        <a href="#" class="nav-link expandable">
+                            <i class="fas fa-file-medical nav-icon"></i> Medical Records <i class="fas fa-chevron-up toggle-icon"></i>
+                        </a>
+                        <ul class="sub-menu"> <!-- Assuming this is expanded -->
+                            <li><a href="#">Conditions</a></li>
+                            <li><a href="#">Allergies</a></li>
+                            <li><a href="#">Immunizations</a></li>
+                            <li><a href="#">Medications</a></li>
+                            <li><a href="#">Lab Results</a></li>
+                            <li><a href="#">Upcoming Visits</a></li>
+                        </ul>
+                    </li>
+                     <li class="nav-section">
+                        <a href="#" class="nav-link expandable">
+                            <i class="fas fa-heartbeat nav-icon"></i> Health Summary <i class="fas fa-chevron-up toggle-icon"></i>
+                        </a>
+                        <ul class="sub-menu"> <!-- Assuming this is expanded -->
+                            <li><a href="#">Personal Information</a></li>
+                            <li><a href="#">Contact Information</a></li>
+                            <li><a href="#">Account Connections</a></li>
+                            <li><a href="#">Notifications</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            <div class="sidebar-footer">
+                <a href="contact.html" class="nav-link">
+                    <i class="fas fa-info-circle nav-icon"></i> Support
+                </a>
+            </div>
+        </aside>
+
+        <!-- ===== Main Content Area Wrapper (Same as before) ===== -->
+        <div class="main-content-wrapper">
+
+            <!-- Top Header Bar (Same as before) -->
+            <header class="page-header">
+                 <!-- Header content remains the same -->
+                 <div class="header-title">
+                    <h2>Profile</h2>
+                </div>
+                <div class="header-actions">
+                    <div class="search-bar">
+                        <input type="search" placeholder="Search records">
+                        <i class="fas fa-search search-icon"></i>
+                    </div>
+                    <!--<button class="btn btn-primary btn-save">Save</button>-->
+                    <button class="icon-btn"><i class="fas fa-calendar-plus"></i></button>
+                    <button class="icon-btn"><i class="fas fa-bell"></i></button>
+                    <img src="https://images.unsplash.com/photo-1531123897727-8f129e1688ce?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fHBvcnRyYWl0fGVufDB8fDB8fHwws" alt="User Avatar" class="user-avatar">
+                </div>
+            </header>
+
+            <!-- ===== Content Area (Medical Records Grid) ===== -->
+            <main class="content-area">
+
+                <section class="medical-records-section">
+                    <h1 class="section-heading">Medical Records</h1>
+
+                    <!-- Add ID to the grid for easier JS targeting -->
+                    <div class="records-grid" id="records-grid">
+                        <!-- Add data attributes to cards for easier data retrieval -->
+                        <div class="record-card" data-record-type="Conditions" data-details="Hypertension (Diagnosed 2018), Asthma (Diagnosed 2005)" data-notes="Managed with medication and regular checkups.">
+                            <h3><i class="fas fa-notes-medical"></i> Conditions</h3>
+                            <p>Summary of diagnosed health conditions.</p>
+                             <!-- Link removed or repurposed -->
+                        </div>
+
+                        <div class="record-card" data-record-type="Allergies" data-details="Penicillin (Rash), Peanuts (Anaphylaxis)" data-notes="Carry EpiPen for peanut allergy.">
+                            <h3><i class="fas fa-allergies"></i> Allergies</h3>
+                            <p>List of known allergies and reactions.</p>
+                        </div>
+
+                        <div class="record-card" data-record-type="Medications" data-details="Lisinopril 10mg (Current), Albuterol Inhaler (As Needed)" data-notes="Refill Lisinopril monthly.">
+                           <h3><i class="fas fa-pills"></i> Medications</h3>
+                            <p>Current and past prescriptions.</p>
+                        </div>
+
+                        <div class="record-card" data-record-type="Upcoming Visits" data-details="Dr. Smith - Annual Physical (05/10/2025), Dr. Jones - Follow-up (05/15/2025)" data-notes="Next checkup scheduled for 6 months.">
+                            <h3><i class="fas fa-calendar-check"></i> Upcoming Visits</h3>
+                             <p>Summary of future appointments.</p>
+                        </div>
+
+                        <div class="record-card" data-record-type="Immunizations" data-details="Tetanus - 2025, Influenza (Flu) - 2024, COVID-19 Bivalent Booster - 2023" data-notes="Up-to-date on recommended vaccines.">
+                            <h3><i class="fas fa-syringe"></i> Immunizations</h3>
+                            <p>Record of received vaccinations.</p>
+                        </div>
+
+                        <div class="record-card" data-record-type="Lab Results" data-details="Complete Blood Count (CBC) - Normal (08/03/2024), Lipid Panel - Results Pending" data-notes="Awaiting results for Lipid Panel.">
+                            <h3><i class="fas fa-flask-vial"></i> Lab Results</h3>
+                            <p>Overview of recent test results.</p>
+                        </div>
+                    </div>
+                </section>
+
+            </main>
+        </div>
+
+        <!-- ===== NEW: Slide-in Edit Panel ===== -->
+        <div class="slide-in-panel" id="edit-panel">
+            <div class="panel-header">
+                <h3 id="panel-title">Record Details</h3>
+                <button class="panel-close-btn" id="panel-close-btn">×</button>
+            </div>
+            <div class="panel-content">
+                <!-- Form inside the panel -->
+                <form id="panel-form">
+                    <div class="panel-form-group">
+                        <label for="panel-details">Details / Items:</label>
+                        <!-- Use textarea for multi-line details -->
+                        <textarea id="panel-details" name="details" rows="6" readonly></textarea>
+                    </div>
+                    <div class="panel-form-group">
+                        <label for="panel-notes">Notes:</label>
+                        <textarea id="panel-notes" name="notes" rows="4" readonly></textarea>
+                    </div>
+                    <!-- Add more specific fields as needed -->
+                </form>
+            </div>
+            <div class="panel-footer">
+                <button class="btn btn-secondary" id="panel-edit-btn">Edit</button>
+                <button class="btn btn-primary" id="panel-save-btn" style="display: none;">Save Changes</button>
+                <button class="btn btn-tertiary" id="panel-cancel-btn" style="display: none;">Cancel</button>
+            </div>
+        </div>
+        <!-- Optional: Overlay behind panel -->
+        <div class="panel-overlay" id="panel-overlay"></div>
+
+    </div> <!-- End page-container -->
+
+    <!-- JavaScript at the end -->
+    <script src="profile-script.js"></script>
+
+</body>
+</html>
