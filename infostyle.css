@@ -1,0 +1,411 @@
+/* Basic Reset & Body */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: #f8f7f4; /* Light beige background */
+    color: #333;
+    line-height: 1.6;
+}
+
+.page-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Header */
+.app-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: #fff;
+    border-bottom: 1px solid #eee;
+}
+
+.header-title {
+    font-size: 1.5em;
+    font-weight: 600;
+}
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.main-nav ul {
+    display: flex;
+}
+
+.main-nav .nav-button {
+    background-color: var(--secondary-color);
+    color: var(--dark-color);
+    padding: 8px 15px;
+    margin: 0 5px;
+    border-radius: var(--border-radius-md);
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+
+}
+.main-nav .nav-button:hover,
+.main-nav .nav-button.active {
+    background-color: var(--primary-color);
+    color: var(--light-color);
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    background-color: #f8f7f4;
+    padding: 8px 15px;
+    border-radius: 20px;
+    border: 1px solid #eee;
+}
+
+.search-bar input {
+    border: none;
+    outline: none;
+    background: none;
+    margin-left: 8px;
+    width: 200px; /* Adjust as needed */
+}
+
+.search-bar i {
+    color: #888;
+}
+
+.header-icon {
+    font-size: 1.2em;
+    color: #555;
+    cursor: pointer;
+}
+
+.user-avatar {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+/* Content Wrapper (Sidebar + Main) */
+.content-wrapper {
+    display: flex;
+    flex-grow: 1; /* Ensures it takes remaining height */
+}
+
+/* Sidebar */
+.sidebar {
+    width: 250px; /* Fixed width */
+    background-color: #edeae4; /* Slightly darker beige */
+    padding: 20px 0;
+    flex-shrink: 0; /* Prevent shrinking */
+    border-right: 1px solid #ddd;
+}
+
+.sidebar-header {
+    padding: 15px 25px;
+    font-weight: 600;
+    font-size: 1.1em;
+    background-color: #e6e2dc; /* Slightly darker header */
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+
+.sidebar-nav ul {
+    list-style: none;
+}
+
+.sidebar-nav li a {
+    display: flex; /* Use flex for icon alignment */
+    align-items: center;
+    gap: 12px; /* Space between icon and text */
+    padding: 12px 25px;
+    color: #555;
+    text-decoration: none;
+    font-size: 0.95em;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.sidebar-nav li a i {
+    width: 18px; /* Ensure icons align nicely */
+    text-align: center;
+    color: #777;
+}
+
+
+.sidebar-nav li a:hover {
+    background-color: #e0dcd3;
+    color: #222;
+}
+
+.sidebar-nav li.active a {
+    background-color: #d9d4cb; /* Active background */
+    color: #111;
+    font-weight: 600;
+}
+
+.sidebar-nav li.active a i {
+    color: #111;
+}
+
+
+/* Main Content */
+.main-content {
+    flex-grow: 1; /* Takes remaining width */
+    padding: 30px 40px;
+    background-color: #f8f7f4; /* Main content area background */
+}
+
+.main-content h1 {
+    font-size: 2em;
+    margin-bottom: 30px;
+    font-weight: 700;
+    color: #333;
+}
+
+/* Table Styles */
+.connections-table-container {
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    margin-bottom: 30px;
+    overflow-x: auto; /* For smaller screens */
+}
+
+#providers-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.95em;
+}
+
+#providers-table th,
+#providers-table td {
+    padding: 15px 12px;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+}
+
+#providers-table th {
+    background-color: #f9f9f9;
+    font-weight: 600;
+    color: #555;
+    text-transform: uppercase;
+    font-size: 0.85em;
+    letter-spacing: 0.5px;
+}
+
+#providers-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+#providers-table tbody tr:hover {
+    background-color: #fcfaf7; /* Subtle hover */
+}
+
+/* Status & Date Specific Styles */
+.status-synced, .date-synced {
+    color: #28a745; /* Green */
+}
+.status-sent, .date-sent {
+    color: #ffc107; /* Amber/Yellow */
+}
+.status-action {
+    /* Style for the cell containing the button */
+}
+.date-info {
+    color: #888; /* Lighter color for empty/default */
+}
+
+/* Buttons */
+button {
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9em;
+    transition: background-color 0.2s ease, opacity 0.2s ease;
+    font-weight: 500;
+}
+
+.send-request-btn {
+    background-color: #007bff; /* Blue */
+    color: white;
+}
+.send-request-btn:hover {
+    background-color: #0056b3;
+}
+
+#add-provider-toggle-btn {
+    background-color: #6c757d; /* Gray */
+    color: white;
+    margin-bottom: 15px; /* Space before form appears */
+}
+#add-provider-toggle-btn:hover {
+    background-color: #5a6268;
+}
+#add-provider-toggle-btn i {
+    margin-right: 5px;
+}
+
+
+#save-provider-btn {
+    background-color: #28a745; /* Green */
+    color: white;
+    margin-right: 10px;
+}
+#save-provider-btn:hover {
+    background-color: #218838;
+}
+
+#cancel-add-provider-btn,
+#cancel-modal-btn {
+    background-color: #dc3545; /* Red */
+    color: white;
+}
+#cancel-add-provider-btn:hover,
+#cancel-modal-btn:hover {
+    background-color: #c82333;
+}
+
+.btn-primary { /* Modal Submit */
+    background-color: #007bff;
+    color: white;
+}
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+.btn-secondary { /* Modal Cancel */
+   background-color: #6c757d;
+   color: white;
+}
+.btn-secondary:hover {
+   background-color: #5a6268;
+}
+
+
+/* Add Provider Form */
+.add-provider-section {
+    margin-top: 20px;
+}
+#add-provider-form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+#add-provider-form input[type="text"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    flex-grow: 1; /* Take available space */
+}
+
+/* Modal Styles */
+.modal {
+    position: fixed;
+    z-index: 1000; /* Ensure it's on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Dim background */
+    display: flex; /* Use flexbox for centering */
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: #fff;
+    padding: 30px 40px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    max-width: 450px; /* Limit max width */
+    position: relative;
+    text-align: center;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 1.8em;
+    color: #aaa;
+    cursor: pointer;
+    line-height: 1;
+}
+.close-btn:hover {
+    color: #333;
+}
+
+.modal h2 {
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.modal p {
+    margin-bottom: 25px;
+    color: #555;
+    font-size: 1.05em;
+}
+
+.modal-actions {
+    display: flex;
+    justify-content: center; /* Center buttons */
+    gap: 15px; /* Space between buttons */
+    margin-top: 20px;
+}
+
+/* Utility */
+.hidden {
+    display: none !important; /* Use important to override potential conflicts */
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 25px;
+    border-radius: var(--border-radius-md);
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-align: center;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: var(--light-color);
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: #a56800; /* Darker shade */
+}
+
+.btn-secondary {
+    background-color: var(--light-color);
+    color: var(--dark-color);
+    border: 1px solid #ddd;
+     border-radius: var(--border-radius-sm); /* Smaller radius for update */
+     padding: 8px 20px;
+}
+
+.btn-secondary:hover {
+    background-color: #eee;
+}
+

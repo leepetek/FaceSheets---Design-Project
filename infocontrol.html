@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account Connections</title>
+    <link rel="stylesheet" href="infostyle.css">
+    <!-- Add Font Awesome for icons (optional, replace with your preferred icon set) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="page-container">
+        <!-- Header -->
+        <header class="app-header">
+            <div class="header-title">
+                <a href="index.html">FaceSheets</a>
+            </div>
+            
+            <div class="header-actions">
+                <button a href="infocontrol.html" class="btn btn-primary btn-save">My Providers</button>
+                <div class="search-bar">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Search records">
+                </div>
+                <i class="fas fa-calendar-alt header-icon"></i>
+                <i class="fas fa-bell header-icon"></i>
+                <img src="https://images.unsplash.com/photo-1531123897727-8f129e1688ce?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fHBvcnRyYWl0fGVufDB8fDB8fHwws" alt="User Avatar" class="user-avatar"> <!-- Replace with actual avatar -->
+            </div>
+        </header>
+
+        <div class="content-wrapper">
+            <!-- Sidebar -->
+            <aside class="sidebar">
+                <div class="sidebar-header">
+                     <i class="fas fa-user-edit"></i> Edit Profile
+                </div>
+                <nav class="sidebar-nav">
+                    <ul>
+                        <li class="active"><a href="#"><i class="fas fa-link"></i> My Providers</a></li>
+                        <li><a href="#"><i class="fas fa-sync-alt"></i> Pending Syncs</a></li>
+                        <li><a href="#"><i class="fas fa-user-md"></i> Account Connections</a></li>
+                        <!-- Add other original links if needed -->
+                    </ul>
+                </nav>
+            </aside>
+
+            <!-- Main Content -->
+            <main class="main-content">
+                <h1>My Providers</h1>
+
+                <div class="connections-table-container">
+                    <table id="providers-table">
+                        <thead>
+                            <tr>
+                                <th>Provider Name</th>
+                                <th>Status</th>
+                                <th>Date</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Sample Rows - Dynamically added or static -->
+                            <tr data-provider-id="1">
+                                <td>Oak Valley Medical Group</td>
+                                <td class="status-synced">Synced</td>
+                                <td class="date-synced">Last Synced: Oct 26, 2023</td>
+                            </tr>
+                            <tr data-provider-id="2">
+                                <td>Dr. Evelyn Reed (Cardiology)</td>
+                                <td class="status-sent">Request Sent</td>
+                                <td class="date-sent">Sent: Nov 10, 2023</td>
+                            </tr>
+                            <tr data-provider-id="3">
+                                <td>Downtown Urgent Care</td>
+                                <td class="status-action"><button class="send-request-btn">Send Request</button></td>
+                                <td class="date-info"></td>
+                            </tr>
+                             <tr data-provider-id="4">
+                                <td>City General Hospital</td>
+                                <td class="status-synced">Synced</td>
+                                <td class="date-synced">Last Synced: Sep 05, 2023</td>
+                            </tr>
+                            <tr data-provider-id="5">
+                                <td>Sunrise Pediatrics</td>
+                                <td class="status-action"><button class="send-request-btn">Send Request</button></td>
+                                <td class="date-info"></td>
+                            </tr>
+                            <!-- New providers will be added here -->
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="add-provider-section">
+                    <button id="add-provider-toggle-btn"><i class="fas fa-plus"></i> Add New Provider</button>
+                    <div id="add-provider-form" class="hidden">
+                        <input type="text" id="new-provider-name" placeholder="Enter Provider Name">
+                        <button id="save-provider-btn">Save Provider</button>
+                        <button id="cancel-add-provider-btn">Cancel</button>
+                    </div>
+                </div>
+
+            </main>
+        </div>
+    </div>
+
+    <!-- Confirmation Modal -->
+    <div id="confirmation-modal" class="modal hidden">
+        <div class="modal-content">
+            <span class="close-btn">×</span>
+            <h2>Confirm Connection Request</h2>
+            <p id="modal-confirmation-text">Are you sure you want to send a connection request to [Provider Name]?</p>
+            <div class="modal-actions">
+                <button id="cancel-modal-btn" class="btn-secondary">Cancel</button>
+                <button id="submit-request-btn" class="btn-primary">Submit Request</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="infoscript.js"></script>
+</body>
+</html>
